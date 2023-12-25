@@ -44,11 +44,10 @@ icon.onclick = function () {
 document.addEventListener("DOMContentLoaded", function () {
   var loader = document.getElementById("preloader");
 
-  // Simulasi penundaan untuk melihat preloader
   setTimeout(function () {
       loader.style.display = "none";
       document.getElementById("main-content").style.display = "block";
-  }, 33000); // Penundaan dalam milidetik (2 detik dalam contoh ini)
+  }, 33000);
 });
 
 $(document).ready(function () {
@@ -68,7 +67,5 @@ $(document).ready(function () {
       $('.content .btn').css('background', color);
 
   });
-
-
 
 });
