@@ -16,6 +16,8 @@ window.onscroll = () => {
   menu.classList.remove("bx-x");
   navlist.classList.remove("open");
 };
+
+// scroll
 const sr = ScrollReveal({
   origin: "top",
   distance: "85px",
@@ -24,9 +26,11 @@ const sr = ScrollReveal({
 });
 sr.reveal(".home-text", { delay: 100 });
 sr.reveal(".home-img", { delay: 400 });
+
 sr.reveal(".container", { delay: 400 });
 sr.reveal(".about-img", {});
 sr.reveal(".about-text", { delay: 300 });
+
 sr.reveal(".middle-text", { delay: 300 });
 sr.reveal(".shop-content", { delay: 300 });
 
@@ -45,27 +49,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var loader = document.getElementById("preloader");
 
   setTimeout(function () {
-      loader.style.display = "none";
-      document.getElementById("main-content").style.display = "block";
+    loader.style.display = "none";
+    document.getElementById("main-content").style.display = "block";
   }, 33000);
 });
 
 $(document).ready(function () {
-
-  $('.size li').click(function () {
-      $(this).addClass('active').siblings().removeClass('active');
+  $(".size li").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
   });
 
-  $('.colors span').click(function () {
+  $(".colors span").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
 
-      $(this).addClass('active').siblings().removeClass('active');
+    let image = $(this).attr("data-image");
+    $(".image img").attr("src", image);
 
-      let image = $(this).attr('data-image');
-      $('.image img').attr('src', image);
-
-      let color = $(this).css('background');
-      $('.content .btn').css('background', color);
-
+    let color = $(this).css("background");
+    $(".content .btn").css("background", color);
   });
-
 });
+
+//Produk Script
